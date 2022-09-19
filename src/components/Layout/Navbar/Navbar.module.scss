@@ -1,0 +1,138 @@
+@use "sass:math";
+
+@import "src/assets/scss/Style.module";
+
+
+.menu {
+  padding: 0 rem(10);
+
+  &__body {
+    @media (max-width: $tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      left: -100%;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+      background-color: $whiteColor;
+      gap: rem(30);
+      @include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
+      padding-left: rem(15);
+      padding-right: rem(15);
+      padding-bottom: rem(30);
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        @include adaptiveValue("height", 140, 50, 767.98, 320, 1);
+        background-color: #e7e7e7;
+        z-index: 2;
+      }
+      .menuOpen & {
+        left: 0;
+
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 16, 14, 1440, 767.98, 1);
+    row-gap: rem(10);
+    column-gap: rem(44);
+    @include adaptiveValue("gap", 44, 15);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      text-align: center;
+      row-gap: rem(40);
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $mainColor;
+    @media (max-width: $tablet) {
+      font-size: rem(40);
+    }
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $violetColor;
+      }
+    }
+  }
+}
+
+.button {
+  @media (max-width: $tablet) {
+    width: 100%;
+    @include adaptiveValue("height", 100, 50);
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: rem(1) solid $mainColor;
+  outline: none;
+  transition: 1s ease-in-out;
+  @media (any-hover: hover) {
+    &:hover {
+      transition: 1s ease-in-out;
+
+      span {
+        color: $whiteColor;
+      }
+
+      border: rem(2) solid beige;
+
+      svg {
+        stroke-dashoffset: -480;
+      }
+    }
+  }
+
+  span {
+    transition: all 0.3s ease 0s;
+    font-size: rem(18);
+    font-weight: 100;
+    padding: rem(20) rem(30);
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+}
+
+.menu__body.menuOpen{
+  left: 0;
+
+  &::before {
+    left: 0;
+  }
+}
+
+
+//====================================================================================================
