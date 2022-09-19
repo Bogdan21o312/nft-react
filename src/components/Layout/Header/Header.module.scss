@@ -9,19 +9,22 @@
   width: 100%;
   z-index: 50;
   transition: all 0.3s ease 0s;
-  @include adaptiveValue("padding", 40, 20);
+  @include adaptiveValue("padding", 40, 10);
   @include adaptiveValue("margin-top", 50, 10);
   &.headerScroll {
     margin: 0;
-    @include adaptiveValue("padding", 40, 20);
-    background-color: $whiteColor;
+    @include adaptiveValue("padding", 20, 10);
+    background-color: $darkColor;
   }
 
   &__container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: rem(300) 1fr rem(300);
     align-items: center;
     justify-content: center;
+    @media (max-width: em(991.98)){
+      grid-template-columns: auto 1fr auto;
+    }
   }
 
   &__logo {
@@ -29,12 +32,13 @@
     z-index: 5;
     transition: all 0.3s ease 0s;
     color: $mainColor;
+    font-family: 'Retro';
     @media (any-hover: hover) {
       &:hover {
         color: $violetColor;
       }
     }
-    @include adaptiveValue("font-size", 30, 15);
+    @include adaptiveValue("font-size", 80, 40);
     letter-spacing: 0.27rem;
     @media (max-width: em(767.98)){
       letter-spacing: 0.07rem;
@@ -90,7 +94,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      background-color: $mainColor;
     }
     &::before {
       top: 0;

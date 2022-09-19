@@ -6,7 +6,7 @@
   @include adaptiveValue("margin-top", 50, 25);
   text-align: center;
   padding: rem(20) rem(0);
-  background-color: #F5F5F7;
+  background-color: $darkColor;
   &__container {
     
   }

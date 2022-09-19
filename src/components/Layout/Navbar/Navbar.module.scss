@@ -18,9 +18,9 @@
       left: -100%;
       transition: all 0.3s ease 0s;
       overflow: auto;
-      background-color: $whiteColor;
+      background-color: $darkColor;
       gap: rem(30);
-      @include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
+      @include adaptiveValue("padding-top", 200, 120, 768, 320, 2);
       padding-left: rem(15);
       padding-right: rem(15);
       padding-bottom: rem(30);
@@ -31,8 +31,8 @@
         left: -100%;
         transition: all 0.3s ease 0s;
         width: 100%;
-        @include adaptiveValue("height", 140, 50, 767.98, 320, 1);
-        background-color: #e7e7e7;
+        @include adaptiveValue("height", 160, 80, 767.98, 320, 1);
+        background-color: $blackColor;
         z-index: 2;
       }
       .menuOpen & {
@@ -50,7 +50,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    @include adaptiveValue("font-size", 16, 14, 1440, 767.98, 1);
+    @include adaptiveValue("font-size", 30, 15, 1920, 767.98, 1);
     row-gap: rem(10);
     column-gap: rem(44);
     @include adaptiveValue("gap", 44, 15);
@@ -67,12 +67,12 @@
   &__link {
     color: $mainColor;
     @media (max-width: $tablet) {
-      font-size: rem(40);
+      @include adaptiveValue("font-size", 70, 40);
     }
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
-        color: $violetColor;
+        color: $blueColor;
       }
     }
   }

@@ -9,12 +9,14 @@
 
 
 // Basic colors
-$mainColor: #000; // Default font color
-$darkColor: #1C1B1F;
+$mainColor: #efefef; // Default font color
+$darkColor: #242424;
 $whiteColor: #fff;
+$blackColor: #000;
 $violetColor: #992572;
 $greenColor: #47BF68;
 $blueColor: #61DAFB;
+$bgColor: #131313;
 
 
 // Minimum Page Width
@@ -50,14 +52,17 @@ $responsiveType: 1;
 // BODY tag styles ============================================================================================================================================================================================================================================================================================================================================================================================
 
 body {
+  color: $mainColor;
+  background-color: $bgColor;
   font-family: 'Roboto Mono', monospace;
   @include adaptiveValue("font-size", 18, 14);
 }
 
 .page {
-  @include adaptiveValue("margin-top", 200, 140);
+  @include adaptiveValue("margin-top", 300, 200);
+  @include adaptiveValue("padding", 80, 20);
   &__container {
-    @include adaptiveValue("padding", 30, 5);
+    transition: all 0.1s ease 0s;
   }
 }
 
