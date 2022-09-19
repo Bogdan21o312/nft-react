@@ -1,0 +1,53 @@
+@use "sass:math";
+
+@import "src/assets/scss/Style.module";
+
+.Grid {
+  display: grid;
+  row-gap: rem(10);
+  @include adaptiveValue("column-gap", 40, 10);
+
+  &ColumnsOne {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &ColumnsTwo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &ColumnsThree {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &ColumnsFour {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &ColumnsFive {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &ColumnsSix {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &ColumnsEight {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  &ColumnsTen {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  &ColumnsTwelve {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &ColumnsSixteen {
+    grid-template-columns: repeat(16, 1fr);
+  }
+
+  &ColumnsEighteen {
+    grid-template-columns: repeat(18, 1fr);
+  }
+}
