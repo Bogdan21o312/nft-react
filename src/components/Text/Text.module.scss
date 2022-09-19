@@ -1,0 +1,115 @@
+@use "sass:math";
+
+@import "src/assets/scss/Style.module";
+
+.TitleBig {
+  @include adaptiveValue("font-size", 70, 35);
+  line-height: math.div(140, 70);
+  span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.TitleMedium {
+  @include adaptiveValue("font-size", 60, 30);
+  line-height: math.div(120, 60);
+  span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.TitleSmall {
+  @include adaptiveValue("font-size", 50, 25);
+  line-height: math.div(100, 50);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+//====================================================================================================
+
+.SubTitleBig {
+  @include adaptiveValue("font-size", 50, 25);
+  line-height: math.div(100, 50);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.SubTitleMedium {
+  @include adaptiveValue("font-size", 40, 20);
+  line-height: math.div(80, 40);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.SubTitleSmall {
+  @include adaptiveValue("font-size", 30, 25);
+  line-height: math.div(60, 30);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+//====================================================================================================
+
+.ParagraphBig {
+  @include adaptiveValue("font-size", 25, 22);
+  line-height: math.div(50, 25);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.ParagraphMedium {
+  @include adaptiveValue("font-size", 20, 18);
+  line-height: math.div(40, 20);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
+
+.ParagraphSmall {
+  @include adaptiveValue("font-size", 15, 12);
+  line-height: math.div(30, 15);
+    span {
+    color: $blueColor;
+  }
+
+  b {
+    color: $violetColor
+  }
+}
