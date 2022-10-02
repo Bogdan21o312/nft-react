@@ -18,9 +18,9 @@ const Navbar: FC<NavbarProps> = ({menuActive}) => {
     return (
         <nav className={`${classes.menu__body} ${menuActive ? classes.menuOpen : ''}`}>
             <ul className={classes.menu__list}>
-                {Navbaritems.map((navbarItem, idx) => (
-                    <li className={classes.menu__item}>
-                        <Link to={navbarItem.itemLink} className={classes.menu__link}  key={idx}>
+                {Navbaritems.map((navbarItem, index) => (
+                    <li className={classes.menu__item} key={index}>
+                        <Link to={navbarItem.itemLink} className={classes.menu__link} >
                             {navbarItem.itemText}
                         </Link>
                     </li>
