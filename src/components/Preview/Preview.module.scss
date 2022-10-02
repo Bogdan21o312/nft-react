@@ -1,3 +1,21 @@
 @use "sass:math";
 
 @import "src/assets/scss/Style.module";
+
+.preview {
+  &__container {
+
+  }
+
+  &__content {
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    //row-gap: rem(10);
+    //@include adaptiveValue("column-gap", 40, 10);
+    display: flex;
+  }
+  
+  &__swiper {
+    max-width: 30%;
+  }
+}
